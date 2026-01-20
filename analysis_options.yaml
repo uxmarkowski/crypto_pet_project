@@ -12,6 +12,45 @@ include: package:flutter_lints/flutter.yaml
 formatter:
   page_width: 100
 
+#  dcm calculate-metrics lib
+
+dcm:
+  metrics:
+    cyclomatic-complexity:
+      threshold: 20
+    maximum-nesting-level:
+      threshold: 4
+    number-of-parameters:
+      threshold: 4
+    number-of-used-widgets:
+      threshold: 20
+    source-lines-of-code:
+      threshold: 40
+    widgets-nesting-level:
+      threshold: 10
+
+  rules:
+    - avoid-unused-parameters
+    - no-empty-block
+    - newline-before-return
+    - avoid-unnecessary-type-assertions
+    - avoid-missed-calls
+    - avoid-passing-self-as-argument
+    - avoid-redundant-async
+    - avoid-self-compare
+    - avoid-self-assignment
+    - avoid-throw-in-catch-block
+    - avoid-unnecessary-conditionals
+    - avoid-passing-async-when-sync-expected
+    - no-boolean-literal-compare
+    - avoid-unnecessary-stateful-widgets
+    - prefer-single-widget-per-file
+    - prefer-extracting-callbacks
+    - avoid-shrink-wrap-in-lists
+    - avoid-returning-widgets
+
+
+
 linter:
   # The lint rules applied to this project can be customized in the
   # section below to disable rules from the `package:flutter_lints/flutter.yaml`

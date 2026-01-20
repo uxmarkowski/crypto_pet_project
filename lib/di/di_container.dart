@@ -39,7 +39,7 @@ class DiContainer {
     switch (_apiConfig) {
       case BybitApiConfig() : initByBitDependency();
       case BinanceApiConfig() : initBinanceDependency();
-    };
+    }
 
   }
 

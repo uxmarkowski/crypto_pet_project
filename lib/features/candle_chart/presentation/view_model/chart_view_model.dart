@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:candlesticks/candlesticks.dart';
 import 'package:crypto_helper_2/features/candle_chart/domain/entities/chart_candle.dart';
 import 'package:crypto_helper_2/features/candle_chart/domain/repositories/candle_repository.dart';
-import 'package:crypto_helper_2/features/coins/presentation/coin_list/state/coins_list_state.dart';
 
 import '../state/candle_chart_state.dart';
 

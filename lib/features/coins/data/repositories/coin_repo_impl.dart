@@ -12,6 +12,7 @@ class CoinRepositoryImplements implements CoinRepository {
   @override
   Future<List<Coin>> getAllAvailableCoins() async {
     final dtoList = await _remoteCoinDataSource.fetchAllAvailableCoins();
+
     return dtoList.map((dto) => dto.toEntity()).toList();
   }
 }

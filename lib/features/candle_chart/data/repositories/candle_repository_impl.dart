@@ -15,6 +15,7 @@ class CandleRepositoryImplements implements CandleRepository {
     required String interval
   }) async{
     List<CandleDto> dto = await _remoteCandleDataSource.fetchCandles(symbol: symbol, interval: interval);
+
     return dto.map((e) => e.toEntity()).toList();
   }
 }

@@ -41,7 +41,7 @@ class BinanceCandleDataSource implements RemoteCandleDataSource {
 
 
       return candles;
-    } catch (e, s) {
+    } catch (e, stackTrace) {
       rethrow;
     }
   }

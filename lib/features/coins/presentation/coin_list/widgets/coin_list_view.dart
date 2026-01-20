@@ -15,6 +15,7 @@ class CoinListView extends StatelessWidget {
       itemCount: coins.length,
       itemBuilder: (context, index) {
         final coin = coins[index];
+
         return ListTile(
           onTap: () => Navigator.of(context).pushNamed(AppRoutes.chart, arguments: coin),
           title: AppText.medium(coin.symbol),

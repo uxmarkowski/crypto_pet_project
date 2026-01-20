@@ -22,7 +22,6 @@ class _CoinChartScreenState extends State<CoinChartScreen> {
 
   late final ChartViewModel _chartViewModel;
 
-
   @override
   void initState() {
     super.initState();
@@ -33,8 +32,6 @@ class _CoinChartScreenState extends State<CoinChartScreen> {
     );
     WidgetsBinding.instance.addPostFrameCallback((_) => _chartViewModel.fetchCandles());
   }
-
-
 
   @override
   Widget build(BuildContext context) {

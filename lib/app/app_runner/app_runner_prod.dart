@@ -3,7 +3,6 @@ import 'package:crypto_helper_2/app/app_error_handler/app_error_handler.dart';
 import 'package:crypto_helper_2/core/api/api_config.dart';
 import 'package:crypto_helper_2/di/di_container.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import '../app.dart';
 import '../app_error_handler/app_error_controller.dart';
 
@@ -34,7 +33,7 @@ class AppRunnerProd {
   }
 
   /// Инициалзация и запуск приложения, настройка обработок ошибок зоны
-  void run() async {
+  void run() {
     runZonedGuarded(_runAppZoned, AppErrorController.setError);
   }
 

@@ -5,8 +5,7 @@ import 'app_error_controller.dart';
 
 class AppErrorHandler extends StatelessWidget {
   final Widget child;
-
-  const AppErrorHandler({required this.child});
+  const AppErrorHandler({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +18,7 @@ class AppErrorHandler extends StatelessWidget {
               stackTrace: details.stack
           );
         }
+
         return child;
       },
     );

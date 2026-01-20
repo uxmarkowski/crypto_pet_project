@@ -4,22 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 /// Самый низкоуровненвый виджет, содержит MaterialApp и проброс зависимостей через MultiProvider
-class App extends StatefulWidget {
+class App extends StatelessWidget {
   final DiContainer diContainer;
   final VoidCallback retryRunApp;
 
-  const App(this.diContainer, this.retryRunApp);
+  const App(this.diContainer, this.retryRunApp, {super.key});
 
-  @override
-  State<App> createState() => _AppState();
-}
-
-class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       // Проброс зависимостей в контекст через провайдер
-      providers: widget.diContainer.providers,
+      providers: diContainer.providers,
       child: MaterialApp(
         title: "Crypto helper 2",
         // Навигация
